@@ -8,3 +8,4 @@
  */
 
 rootProject.name = 'cicd-pipeline-train-schedule-jenkins'
+org.gradle.java.home= '/usr/local/java/jdk1.7.0_80'
