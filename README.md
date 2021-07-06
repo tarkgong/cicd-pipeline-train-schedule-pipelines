@@ -3,6 +3,18 @@
 # 다이어그램
 ![eks](./eks.svg)
 
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.48.0 |
+| <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | >= 1.11.1 |
+
+## Modules
+| Name | Source | Version |
+|------|--------|---------|
+|eks| terraform-aws-eks | 17.1.0 |
+
 # Resources
 |Name|Type|
 |------|---|
