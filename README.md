@@ -3,8 +3,47 @@
 # 다이어그램
 ![eks](./eks.svg)
 
-## Providers
+# 코드 구성
+| folder | 설명 |
+|--------|------|
+| eks | terraform 구성 코드 |
+| kakaomobility | Hostname Return Program |
 
+# eks 코드
+실행 방법 : terraform apply -var-file configuration
+
+### 구성 설명
+| folder | 설명 |
+|--------|-----|
+|az      | ap-northeast-2a,ap-northeast-2c  |
+|subnet  | Public, Private subnet  |
+|ec2     | bastion host 사용(kubectl 및 deploy용도)  |
+|eks     | 프라이빗, 퍼블릭 액세스 사용, node는 private subnet 위치 |
+|vpc private link | 프라이빗 클러스터 구성으로 eks 사용에 필요한 엔드포인트 생성 |
+
+# kakaomobility 코드
+사전 준비
+* ECR Auth
+
+| Auth | 
+|------|
+|ecr:GetAuthorizationToken|
+|ecr:InitiateLayerUpload|
+|ecr:UploadLayerPart|
+|ecr:CompleteLayerUpload|
+|ecr:BatchCheckLayerAvailability|
+|ecr:PutImage|
+
+![eks](./deploy.svg)
+
+실행 스크립트 : ./deploy/deploy.sh
+
+k8s 구성  
+![eks](./app.svg)
+
+
+## Terraform 상세 구성
+## Providers
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.48.0 |
