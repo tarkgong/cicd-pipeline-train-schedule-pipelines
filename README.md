@@ -10,7 +10,7 @@
 | kakaomobility | Hostname Return Program |
 
 # eks 코드
-실행 방법 : terraform apply -var-file configuration
+실행 방법 : terraform apply -var-file configurations/eks.tfvars
 
 ### 구성 설명
 | folder | 설명 |
